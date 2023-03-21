@@ -1,0 +1,10 @@
+const String errorRequiredEmail = "Please Enter Email";
+const String errorRequiredPassword = "Please Enter Password";
+const String errorMinimum6Character = "Please Enter Minimum 6 Character";
+const String errorValid = "";
+const String errorValidEmail = "Email must be valid";
+const String errorRequiredName = "Please Enter Name";
+const String errorRequiredAge = "Please Enter Age";
+const String errorRequiredDob = "Please Select Date of Birth";
+const String errorRequiredMobileNumber = "Please Enter Mobile Number";
+const String errorValidMobileNumber = "Please Enter Valid Mobile Number";
