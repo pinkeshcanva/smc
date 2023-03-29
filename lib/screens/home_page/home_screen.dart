@@ -38,7 +38,9 @@ class _HomeScreenState extends State<HomeScreen> {
       },
       {
         'label': txtBloodBank,
-        'onTap': () {},
+        'onTap': () {
+          Navigator.pushNamed(context, googleMapScreen);
+        },
       },
       {
         'label': txtLiveHelp,
@@ -46,7 +48,9 @@ class _HomeScreenState extends State<HomeScreen> {
       },
       {
         'label': txtPoliceStations,
-        'onTap': () {},
+        'onTap': () {
+          Navigator.pushNamed(context, googleMapScreen);
+        },
       },
       {
         'label': txtShelter,
@@ -102,11 +106,15 @@ class _HomeScreenState extends State<HomeScreen> {
     List<Map<String, dynamic>> secondList = [
       {
         'label': txtAnimalNgos,
-        'onTap': () {},
+        'onTap': () {
+          Navigator.pushNamed(context, googleMapScreen);
+        },
       },
       {
         'label': txtHospitals,
-        'onTap': () {},
+        'onTap': () {
+          Navigator.pushNamed(context, googleMapScreen);
+        },
       },
       {
         'label': txtNgoNearYou,
@@ -153,7 +161,8 @@ class _HomeScreenState extends State<HomeScreen> {
           itemBuilder: (context) {
             return popUpMenuItems
                 .map((e) => PopupMenuItem(
-                      child: labels(text: txtAnimalNgos),
+                      onTap: e['onTap'],
+                      child: labels(text: e['label'].toString()),
                     ))
                 .toList();
           },
@@ -182,27 +191,30 @@ class _HomeScreenState extends State<HomeScreen> {
                   scrollDirection: Axis.horizontal,
                   children: popUpMenuItems
                       .map(
-                        (e) => Container(
-                          height: 70,
-                          width: 100,
-                          margin: const EdgeInsets.all(10.0),
-                          padding: const EdgeInsets.all(10.0),
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                              color: AppColors.primaryColor,
-                              borderRadius: BorderRadius.circular(15.0),
-                              boxShadow: const [
-                                BoxShadow(
-                                  blurRadius: 5.0,
-                                  color: AppColors.loginColor,
-                                  offset: Offset(0, 5),
-                                ),
-                              ]),
-                          child: labels(
-                            text: e['label'].toString(),
-                            maxLine: 3,
-                            size: 17,
-                            color: AppColors.darkTextColor,
+                        (e) => InkWell(
+                          onTap: e['onTap'],
+                          child: Container(
+                            height: 70,
+                            width: 100,
+                            margin: const EdgeInsets.all(10.0),
+                            padding: const EdgeInsets.all(10.0),
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                                color: AppColors.primaryColor,
+                                borderRadius: BorderRadius.circular(15.0),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 5.0,
+                                    color: AppColors.loginColor,
+                                    offset: Offset(0, 5),
+                                  ),
+                                ]),
+                            child: labels(
+                              text: e['label'].toString(),
+                              maxLine: 3,
+                              size: 17,
+                              color: AppColors.darkTextColor,
+                            ),
                           ),
                         ),
                       )
@@ -233,28 +245,31 @@ class _HomeScreenState extends State<HomeScreen> {
                   scrollDirection: Axis.horizontal,
                   children: secondList
                       .map(
-                        (e) => Container(
-                          height: 70,
-                          width: 100,
-                          margin: const EdgeInsets.all(10.0),
-                          padding: const EdgeInsets.all(10.0),
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            color: AppColors.primaryColor,
-                            borderRadius: BorderRadius.circular(15.0),
-                            boxShadow: const [
-                              BoxShadow(
-                                blurRadius: 5.0,
-                                color: AppColors.loginColor,
-                                offset: Offset(0, 5),
-                              ),
-                            ],
-                          ),
-                          child: labels(
-                            text: e['label'].toString(),
-                            maxLine: 3,
-                            size: 17,
-                            color: AppColors.darkTextColor,
+                        (e) => InkWell(
+                          onTap: e['onTap'],
+                          child: Container(
+                            height: 70,
+                            width: 100,
+                            margin: const EdgeInsets.all(10.0),
+                            padding: const EdgeInsets.all(10.0),
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              color: AppColors.primaryColor,
+                              borderRadius: BorderRadius.circular(15.0),
+                              boxShadow: const [
+                                BoxShadow(
+                                  blurRadius: 5.0,
+                                  color: AppColors.loginColor,
+                                  offset: Offset(0, 5),
+                                ),
+                              ],
+                            ),
+                            child: labels(
+                              text: e['label'].toString(),
+                              maxLine: 3,
+                              size: 17,
+                              color: AppColors.darkTextColor,
+                            ),
                           ),
                         ),
                       )

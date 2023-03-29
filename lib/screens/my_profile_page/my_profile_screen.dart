@@ -14,18 +14,18 @@ import '../../networks/app_preference.dart';
 import '../../utils/colors.dart';
 import '../../utils/screen_utils.dart';
 import '../../utils/strings.dart';
-import 'registration_screen_bloc.dart';
-import 'registration_screen_widget.dart';
+import 'my_profile_screen_bloc.dart';
+import 'my_profile_screen_widget.dart';
 import 'package:image_picker/image_picker.dart';
 
-class RegistrationScreen extends StatefulWidget {
-  const RegistrationScreen({Key? key}) : super(key: key);
+class MyProfileScreen extends StatefulWidget {
+  const MyProfileScreen({Key? key}) : super(key: key);
 
   @override
-  _RegistrationScreenState createState() => _RegistrationScreenState();
+  _MyProfileScreenState createState() => _MyProfileScreenState();
 }
 
-class _RegistrationScreenState extends State<RegistrationScreen> {
+class _MyProfileScreenState extends State<MyProfileScreen> {
   TextEditingController emailController = TextEditingController();
   TextEditingController nameController = TextEditingController();
   TextEditingController phoneNumberController = TextEditingController();
@@ -37,35 +37,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   String phoneNumberErrorMsg = "";
   String dobErrorMsg = "";
   String passwordErrorMsg = "";
-
-  // _register(context) async {
-  //   // if (user != null) {
-  //   // String key = db.push().key!;
-  //   // ProfileModel profile = ProfileModel(
-  //   //   name: nameController.text,
-  //   //   email: emailController.text,
-  //   //   mobile: phoneNumberController.text,
-  //   //   dob: dobController.text,
-  //   //   key: key,
-  //   // );
-  //   // db.child(dbProfiles).child(key).set(profile.toMap());
-  //   Navigator.pushReplacementNamed(context, loginScreen);
-  //   showDialog(
-  //     context: context,
-  //     builder: (context) => Dialog(
-  //       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
-  //       child: Padding(
-  //         padding: paddingAll(20.0),
-  //         child: labels(
-  //           text: txtRegistrationSuccessfully,
-  //           size: 16.0,
-  //           fontWeight: FontWeight.w600,
-  //         ),
-  //       ),
-  //     ),
-  //   );
-  //   // }
-  // }
 
   @override
   void dispose() {
@@ -79,7 +50,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
   @override
   void initState() {
-    registrationBloc.getLoadData(false);
+    AppPreference.inti();
+    nameController.text = AppPreference.getString(txtName);
+    emailController.text = AppPreference.getString(txtEmailAddress);
+    phoneNumberController.text = AppPreference.getString(txtPhoneNumber);
     super.initState();
   }
 
@@ -94,8 +68,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
   @override
   Widget build(BuildContext context) {
-    AppPreference.inti();
-    Screen.setScreenSize(context);
     return SafeArea(
       child: Scaffold(
         backgroundColor: AppColors.backgroundColor,
@@ -114,7 +86,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     // ),
 
                     logoWidget,
-                    createAnAccount,
+                    myProfileWidget,
                     verticalSpace(23.0),
                     FieldAndLabel(
                       labelValue: txtName,
@@ -123,6 +95,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       controller: nameController,
                       validationMessage: nameErrorMsg,
                       fillColor: AppColors.white,
+                      isEnable: false,
                       rightIcon: icons(
                           icon: Icons.person, color: AppColors.iconTextColor),
                       onChanged: (value) {
@@ -139,6 +112,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       controller: emailController,
                       validationMessage: emailErrorMsg,
                       fillColor: AppColors.white,
+                      isEnable: false,
                       rightIcon: icons(
                           icon: Icons.email_outlined,
                           color: AppColors.iconTextColor),
@@ -157,6 +131,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       validationMessage: phoneNumberErrorMsg,
                       maxLength: 10,
                       fillColor: AppColors.white,
+                      isEnable: false,
                       rightIcon: icons(
                           icon: Icons.call, color: AppColors.iconTextColor),
                       onChanged: (value) {
@@ -172,70 +147,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     //   label: txtDOB,
                     //   error: dobErrorMsg,
                     // ),
-                    verticalSpace(23.0),
-                    FieldAndLabel(
-                      labelValue: txtPassword,
-                      hint: txtEnterPassword,
-                      controller: passwordController,
-                      validationMessage: passwordErrorMsg,
-                      fillColor: AppColors.white,
-                      rightIcon: icons(
-                          icon: Icons.lock_outline,
-                          color: AppColors.iconTextColor),
-                      onChanged: (value) {
-                        setState(() {
-                          passwordErrorMsg = passwordValidationMsg(value);
-                        });
-                      },
-                    ),
-                    verticalSpace(30.0),
-                    createAccountButton(onTap: () {
-                      setState(() {
-                        emailErrorMsg =
-                            emailValidationMsg(emailController.text);
-                        nameErrorMsg = nameValidationMsg(nameController.text);
-                        phoneNumberErrorMsg =
-                            mobileValidationMsg(phoneNumberController.text);
-                        passwordErrorMsg =
-                            passwordValidationMsg(passwordController.text);
-                        // dobErrorMsg = dobValidationMsg(dobController.text);
-                      });
-
-                      if (emailErrorMsg == "" &&
-                          nameErrorMsg == "" &&
-                          phoneNumberErrorMsg == "" &&
-                          // dobErrorMsg == "" &&
-                          passwordErrorMsg == "") {
-                        AppPreference.put(txtEmailAddress, emailController.text);
-                        AppPreference.put(txtName, nameController.text);
-                        AppPreference.put(txtPhoneNumber, phoneNumberController.text);
-                        AuthServices.signupUser(
-                          context: context,
-                          email: emailController.text,
-                          password: passwordController.text,
-                          phoneNumber: phoneNumberController.text,
-                          name: nameController.text,
-                        );
-
-                        // _register(context);
-                        // Navigator.pushNamed(
-                        //   context,
-                        //   dashboard,
-                        // );
-                      }
-                    }),
                     verticalSpace(Screen.bottomHeight),
                   ],
                 ),
               ),
-            ),
-            StreamBuilder(
-              stream: registrationBloc.loadDataStream,
-              builder: (context, AsyncSnapshot<bool> snapshot) {
-                return snapshot.hasData && snapshot.data!
-                    ? fullScreenCircularIndicator
-                    : Container();
-              },
             ),
           ],
         ),

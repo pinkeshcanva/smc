@@ -21,16 +21,16 @@ class AppPreference {
     }
   }
 
-  static getString(String key) {
+  static String getString(String key) {
     String? value = prefs!.getKeys().contains(key) ? prefs!.getString(key) : "";
-    return value;
+    return value ?? '';
   }
 
-  static getInt(String key) => prefs!.getInt(key);
+  static int getInt(String key) => prefs!.getInt(key) ?? 0;
 
-  static getDouble(String key) => prefs!.getDouble(key);
+  static double getDouble(String key) => prefs!.getDouble(key) ?? 0.0;
 
-  static getBool(String key) => prefs!.getBool(key);
+  static bool getBool(String key) => prefs!.getBool(key) ?? false;
 
   static remove(String key) async => prefs!.remove(key);
 

@@ -9,7 +9,9 @@ const String txtEnterPassword = "Please Enter Password";
 const String txtForgotPassword = "Forgot password?";
 const String txtDoNotHaveAccount = "Don’t have an account?";
 const String txtNewUser = "New User";
-const String txtLogout= "Logout";
+const String txtLogout = "Logout";
+const String txtYes = "Yes";
+const String txtNo = "No";
 
 /// Registration Screen
 const String txtCreateAnAccount = 'Create \nan Account';
@@ -43,3 +45,17 @@ const String txtFreeTeachers = 'Free Teachers';
 const String txtFreeDoctors = 'Free Doctors';
 const String txtFreeCourses = 'Free Courses';
 const String txtKnowledgeAndEducation = 'Knowledge And Education';
+
+/// My Profile
+const String txtMyProfile = 'My Profile';
+
+/// Help Screen
+const String txtHelp = 'Help';
+const String txtSomeoneNeedFood = "Someone Need Foods";
+const String txtAccident = "Accident";
+const String txtHospitalEmergency = "Hospital Emergency";
+const String txtWomanHelp = "Woman Help";
+const String txtTerror = "Terror";
+const String txtPoliceHelp = "Police Help";
+const String txtCleanAreaHelp = "Clean Area Help";
+const String txtAnimalHelp = "Animal Help";

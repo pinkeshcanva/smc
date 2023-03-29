@@ -3,7 +3,7 @@ import 'package:smc/common/widgets/icon_and_images.dart';
 import 'package:smc/common/widgets/text_and_styles.dart';
 
 Widget donationPageTab = Tab(
-  text: 'Donations',
+  text: 'Donations',icon: icons(icon: Icons.home),
   // child: labels(text: 'Donations', size: 16.0, maxLine: 3), height: 80,
   // icon: icons(icon: Icons.ac_unit),
 );
@@ -19,6 +19,7 @@ Widget ngosTab = Tab(
 );
 Widget profileTab = Tab(
   text: 'Profile',
+  icon: icons(icon: Icons.person),
   // child: labels(text: 'Profile', size: 16.0), height: 80,
   // icon: icons(icon: Icons.home),
 );

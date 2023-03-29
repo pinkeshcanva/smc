@@ -4,7 +4,7 @@
 // import 'package:raksha/common/widgets/padding_margin.dart';
 // import 'package:raksha/common/widgets/text_and_styles.dart';
 // import 'package:raksha/screens/profile_screen/profile_screen_bloc.dart';
-// import 'package:raksha/screens/registration_screen/registration_screen_widget.dart';
+// import 'package:raksha/screens/registration_screen/my_profile_screen_widget.dart';
 // import 'package:raksha/utils/icons.dart';
 // import 'package:raksha/utils/strings.dart';
 //

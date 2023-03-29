@@ -11,6 +11,7 @@ class FieldAndLabel extends StatefulWidget {
   final int maxLine;
   final int? maxLength;
   final bool isRequire;
+  final bool isEnable;
   final Widget? rightIcon;
   final Widget? leftIcon;
   final bool isPassword;
@@ -26,6 +27,7 @@ class FieldAndLabel extends StatefulWidget {
     Key? key,
     this.isRequire = false,
     this.readOnly = false,
+    this.isEnable = true,
     this.fillColor = AppColors.white,
     this.maxLine = 1,
     this.maxLength,
@@ -72,7 +74,8 @@ class _FieldAndLabelState extends State<FieldAndLabel> {
               if (widget.isRequire)
                 Text(
                   "*",
-                  style: defaultTextStyle(color: AppColors.primaryColor, size: 14),
+                  style:
+                      defaultTextStyle(color: AppColors.primaryColor, size: 14),
                   textAlign: TextAlign.start,
                 ),
             ]),
@@ -110,6 +113,7 @@ class _FieldAndLabelState extends State<FieldAndLabel> {
         cursorColor: AppColors.iconTextColor,
         maxLines: widget.maxLine,
         decoration: InputDecoration(
+          enabled: widget.isEnable,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(50.0),
             borderSide: const BorderSide(color: AppColors.transparent),
