@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:smc/common/widgets/icon_and_images.dart';
 import 'package:smc/common/widgets/text_and_styles.dart';
 import 'package:smc/screens/dashboard/dashboard_screen_widget.dart';
+import 'package:smc/screens/help_page/help_screen.dart';
 import 'package:smc/screens/home_page/home_screen.dart';
 import 'package:smc/screens/my_profile_page/my_profile_screen.dart';
 import 'package:smc/utils/colors.dart';
@@ -32,12 +33,13 @@ class _DashboardState extends State<Dashboard>
     //   color: Colors.blueAccent,
     // ),
     const MyProfileScreen(),
+    const HelpScreen(),
   ];
 
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 2, vsync: this);
+    _tabController = TabController(length: 3, vsync: this);
   }
 
   @override
@@ -47,17 +49,17 @@ class _DashboardState extends State<Dashboard>
         controller: _tabController,
         children: _pageList,
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        backgroundColor: AppColors.iconTextColor,
-        onPressed: () {
-          Navigator.pushNamed(context, helpScreen);
-        },
-        label: labels(
-          text: txtHelp,
-          color: AppColors.white,
-          size: 16,
-        ),
-      ),
+      // floatingActionButton: FloatingActionButton.extended(
+      //   backgroundColor: AppColors.iconTextColor,
+      //   onPressed: () {
+      //     Navigator.pushNamed(context, helpScreen);
+      //   },
+      //   label: labels(
+      //     text: txtHelp,
+      //     color: AppColors.white,
+      //     size: 16,
+      //   ),
+      // ),
       bottomNavigationBar: TabBar(
         controller: _tabController,
         tabs: <Widget>[
@@ -65,6 +67,7 @@ class _DashboardState extends State<Dashboard>
           // courseAndTeacherTab,
           // ngosTab,
           profileTab,
+          helpTab,
         ],
         indicatorColor: AppColors.transparent,
         labelColor: AppColors.darkTextColor,

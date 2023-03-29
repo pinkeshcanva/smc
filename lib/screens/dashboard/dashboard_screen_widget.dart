@@ -23,3 +23,9 @@ Widget profileTab = Tab(
   // child: labels(text: 'Profile', size: 16.0), height: 80,
   // icon: icons(icon: Icons.home),
 );
+Widget helpTab = Tab(
+  text: 'Help',
+  icon: icons(icon: Icons.help),
+  // child: labels(text: 'Profile', size: 16.0), height: 80,
+  // icon: icons(icon: Icons.home),
+);

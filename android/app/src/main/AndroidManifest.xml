@@ -1,13 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.smc">
    <application
-        android:label="smc"
+        android:label="Save My City"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
        <meta-data android:name="com.google.android.geo.API_KEY"
            android:value="AIzaSyC28xEw130buy_fa4BAR3eQigOPdX8lawQ"/>
         <activity
             android:name=".MainActivity"
+            android:label="Save My City"
             android:exported="true"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"

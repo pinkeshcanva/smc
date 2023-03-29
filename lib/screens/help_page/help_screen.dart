@@ -12,6 +12,7 @@ import 'package:smc/screens/home_page/home_screen_widget.dart';
 import 'package:smc/utils/colors.dart';
 import 'package:smc/utils/navigator_route.dart';
 import 'package:smc/utils/strings.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../services/auth_services_data.dart';
 
@@ -27,38 +28,60 @@ class _HelpScreenState extends State<HelpScreen> {
   Widget build(BuildContext context) {
     List<Map<String, dynamic>> helpsList = [
       {
-        'label': txtSomeoneNeedFood,
-        'onTap': () {},
-      },
-      {
         'label': txtAccident,
+        'contact': '100',
         'onTap': () {
-          Navigator.pushNamed(context, googleMapScreen);
+          launchUrl(Uri.parse('tel:100'));
         },
       },
       {
-        'label': txtHospitalEmergency,
-        'onTap': () {},
+        'label': 'Ambulance',
+        'contact': '108',
+        'onTap': () {
+          launchUrl(Uri.parse('tel:108'));
+        },
       },
       {
         'label': txtWomanHelp,
-        'onTap': () {},
+        'contact': '1088',
+        'onTap': () {
+          launchUrl(Uri.parse('tel:1088'));
+        },
       },
       {
-        'label': txtTerror,
-        'onTap': () {},
+        'label': 'Fire in Open',
+        'contact': '111',
+        'onTap': () {
+          launchUrl(Uri.parse('tel:111'));
+        },
       },
       {
         'label': txtPoliceHelp,
-        'onTap': () {},
+        'contact': '100',
+        'onTap': () {
+          launchUrl(Uri.parse('tel:100'));
+        },
       },
       {
-        'label': txtCleanAreaHelp,
-        'onTap': () {},
+        'label': 'Clean-Up',
+        'contact': '200',
+        'onTap': () {
+          launchUrl(Uri.parse('tel:200'));
+        },
       },
       {
         'label': txtAnimalHelp,
-        'onTap': () {},
+        'contact': '202',
+        'onTap': () {
+          launchUrl(Uri.parse('tel:202'));
+        },
+      },
+      {
+        'label': 'Human Rights',
+        'contact': '222',
+        'onTap': () {
+          launchUrl(Uri.parse('tel:222'));
+        },
       },
     ];
 
@@ -76,11 +99,8 @@ class _HelpScreenState extends State<HelpScreen> {
                   (e) => InkWell(
                     onTap: e['onTap'],
                     child: Container(
-                      height: 70,
-                      width: 100,
                       margin: const EdgeInsets.all(10.0),
                       padding: const EdgeInsets.all(10.0),
-                      alignment: Alignment.center,
                       decoration: BoxDecoration(
                           color: AppColors.primaryColor,
                           borderRadius: BorderRadius.circular(15.0),
@@ -91,11 +111,35 @@ class _HelpScreenState extends State<HelpScreen> {
                               offset: Offset(0, 5),
                             ),
                           ]),
-                      child: labels(
-                        text: e['label'].toString(),
-                        maxLine: 3,
-                        size: 17,
-                        color: AppColors.darkTextColor,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            labels(
+                              text: e['label'].toString(),
+                              maxLine: 3,
+                              size: 17,
+                              color: AppColors.darkTextColor,
+                            ),
+                            Expanded(
+                              child: labels(
+                                text: ' : ',
+                                size: 17,
+                                color: AppColors.darkTextColor,
+                              ),
+                            ),
+                            icons(
+                              icon: Icons.phone,
+                              color: AppColors.darkTextColor,
+                            ),
+                            labels(
+                              text: '  ${e['contact']}',
+                              maxLine: 3,
+                              size: 17,
+                              color: AppColors.darkTextColor,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

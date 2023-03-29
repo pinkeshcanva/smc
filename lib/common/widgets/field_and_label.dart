@@ -39,7 +39,7 @@ class FieldAndLabel extends StatefulWidget {
     required this.hint,
     this.rightIcon,
     this.leftIcon,
-    this.validationMessage,
+    this.validationMessage = '',
     required this.controller,
   }) : super(key: key);
 
