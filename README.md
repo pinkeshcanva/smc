@@ -27,22 +27,39 @@ SDGs covered
 Save My City covers a wide range of SDGs, including:
 
 No Poverty (SDG 1)
+
 Zero Hunger (SDG 2)
+
 Good Health and Well-being (SDG 3)
+
 Quality Education (SDG 4)
+
 Gender Equality (SDG 5)
+
 Clean Water and Sanitation (SDG 6)
+
 Affordable and Clean Energy (SDG 7)
+
 Decent Work and Economic Growth (SDG 8)
+
 Industry, Innovation and Infrastructure (SDG 9)
+
 Reduced Inequalities (SDG 10)
+
 Sustainable Cities and Communities (SDG 11)
+
 Responsible Consumption and Production (SDG 12)
+
 Climate Action (SDG 13)
+
 Life Below Water (SDG 14)
+
 Life on Land (SDG 15)
+
 Peace, Justice and Strong Institutions (SDG 16)
+
 Partnerships for the Goals (SDG 17)
+
 Demo
 A demo of the Save My City application is available on our website: https://www.savemycity.com/demo
 
