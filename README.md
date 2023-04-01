@@ -3,6 +3,28 @@ Save My City (SMC)
 
 Save My City is an all-in-one application that aims to solve world problems and promote sustainable development. It is developed using Google technologies, including Android, Flutter, Firebase, and Google Maps API, and is available on Android, iOS, and web platforms.
 
+
+Tree plantation - SDG 15 (Life on Land)
+Beach and land clean-up drive - SDG 14 (Life Below Water) and SDG 15 (Life on Land)
+Awareness event - SDG 4 (Quality Education) and SDG 13 (Climate Action)
+Each one teach one - SDG 4 (Quality Education)
+Blood bank - SDG 3 (Good Health and Well-being)
+Food bank - SDG 2 (Zero Hunger)
+Shelter bank - SDG 11 (Sustainable Cities and Communities)
+Donation bank - SDG 1 (No Poverty)
+Swap shop barter system - SDG 12 (Responsible Consumption and Production)
+Free teacher and teaching - SDG 4 (Quality Education)
+Free medical assistance and mobile doctor - SDG 3 (Good Health and Well-being)
+Free learning content and video - SDG 4 (Quality Education)
+Youth volunteering - SDG 16 (Peace, Justice and Strong Institutions)
+Farmers market - SDG 2 (Zero Hunger) and SDG 12 (Responsible Consumption and Production)
+`Animal NGO - SDG 15 (Life on Land) and **SDG 14** (Life Below Water)
+NGO for human - SDG 1 (No Poverty)` and SDG 3 (Good Health and Well-being)
+Live help - SDG 3 (Good Health and Well-being) and SDG 10 (Reduced Inequalities)
+Stop open waste fire burning - SDG 12 (Responsible Consumption and Production) and SDG 13 (Climate Action)
+Overall, the initiatives covered in the application align with a range of SDGs, highlighting the interconnectedness of the sustainable development agenda.
+
+
 The application focuses on all 17 Sustainable Development Goals (SDGs) of the United Nations, as the goals are interlinked with each other. The following activities and features are available in the application to make the world a better place:
 
 Tree plantation
