@@ -6,24 +6,43 @@ Save My City is an all-in-one application that aims to solve world problems and 
 The application focuses on all 17 Sustainable Development Goals (SDGs) of the United Nations, as the goals are interlinked with each other. The following activities and features are available in the application to make the world a better place:
 
 Tree plantation
+
 Beach and land clean-up drive
+
 Awareness event
+
 Each one teach one
+
 Blood bank
+
 Food bank
+
 Shelter bank
+
 Donation bank
+
 Swap shop barter system
+
 Free teacher and teaching
+
 Free medical assistance and mobile doctor
+
 Free learning content and video
+
 Youth volunteering
+
 Farmers market
+
 Animal NGO
+
 NGO for human
+
 Live help
+
 Stop open waste fire burning
+
 SDGs covered
+
 Save My City covers a wide range of SDGs, including:
 
 No Poverty (SDG 1)
