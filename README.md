@@ -41,7 +41,10 @@ Live help
 
 Stop open waste fire burning
 
+==================================================================
+
 SDGs covered
+==================================================================
 
 Save My City covers a wide range of SDGs, including:
 
@@ -80,15 +83,19 @@ Peace, Justice and Strong Institutions (SDG 16)
 Partnerships for the Goals (SDG 17)
 
 Demo
-A demo of the Save My City application is available on our website: https://www.savemycity.com/demo
+A demo of the Save My City application is available on our website: https://www.Projectsurat.com/
 
 Installation
 To install Save My City, follow the instructions below:
 
-Clone the repository: git clone https://github.com/savemycity/savemycity.git
+Clone the repository: git clone [https://github.com/savemycity/savemycity.git]
+
 Install the required packages: flutter pub get
+
 Run the application: flutter run
+
 Contributing
+
 We welcome contributions from developers of all skill levels. To contribute to Save My City, please fork the repository and create a pull request with your changes.
 
 License
