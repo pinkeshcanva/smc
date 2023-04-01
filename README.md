@@ -1,16 +1,57 @@
-# smc
+Save My City (SMC)
+Save My City is an all-in-one application that aims to solve world problems and promote sustainable development. It is developed using Google technologies, including Android, Flutter, Firebase, and Google Maps API, and is available on Android, iOS, and web platforms.
 
-A new Flutter project.
+The application focuses on all 17 Sustainable Development Goals (SDGs) of the United Nations, as the goals are interlinked with each other. The following activities and features are available in the application to make the world a better place:
 
-## Getting Started
+Tree plantation
+Beach and land clean-up drive
+Awareness event
+Each one teach one
+Blood bank
+Food bank
+Shelter bank
+Donation bank
+Swap shop barter system
+Free teacher and teaching
+Free medical assistance and mobile doctor
+Free learning content and video
+Youth volunteering
+Farmers market
+Animal NGO
+NGO for human
+Live help
+Stop open waste fire burning
+SDGs covered
+Save My City covers a wide range of SDGs, including:
 
-This project is a starting point for a Flutter application.
+No Poverty (SDG 1)
+Zero Hunger (SDG 2)
+Good Health and Well-being (SDG 3)
+Quality Education (SDG 4)
+Gender Equality (SDG 5)
+Clean Water and Sanitation (SDG 6)
+Affordable and Clean Energy (SDG 7)
+Decent Work and Economic Growth (SDG 8)
+Industry, Innovation and Infrastructure (SDG 9)
+Reduced Inequalities (SDG 10)
+Sustainable Cities and Communities (SDG 11)
+Responsible Consumption and Production (SDG 12)
+Climate Action (SDG 13)
+Life Below Water (SDG 14)
+Life on Land (SDG 15)
+Peace, Justice and Strong Institutions (SDG 16)
+Partnerships for the Goals (SDG 17)
+Demo
+A demo of the Save My City application is available on our website: https://www.savemycity.com/demo
 
-A few resources to get you started if this is your first Flutter project:
+Installation
+To install Save My City, follow the instructions below:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Clone the repository: git clone https://github.com/savemycity/savemycity.git
+Install the required packages: flutter pub get
+Run the application: flutter run
+Contributing
+We welcome contributions from developers of all skill levels. To contribute to Save My City, please fork the repository and create a pull request with your changes.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+License
+Save My City is open source software licensed under the MIT License.
