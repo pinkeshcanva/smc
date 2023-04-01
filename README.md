@@ -1,4 +1,6 @@
 Save My City (SMC)
+
+
 Save My City is an all-in-one application that aims to solve world problems and promote sustainable development. It is developed using Google technologies, including Android, Flutter, Firebase, and Google Maps API, and is available on Android, iOS, and web platforms.
 
 The application focuses on all 17 Sustainable Development Goals (SDGs) of the United Nations, as the goals are interlinked with each other. The following activities and features are available in the application to make the world a better place:
